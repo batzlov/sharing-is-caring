@@ -42,7 +42,7 @@ export const SignUpSchema = z.object({
         .max(64, {
             message: "Das Passwort darf maximal 64 Zeichen lang sein"
         }),
-    passwordConfirm: z
+    confirmPassword: z
         .string()
         .min(8, {
             message: "Das Passwort muss mindestens 8 Zeichen lang sein"

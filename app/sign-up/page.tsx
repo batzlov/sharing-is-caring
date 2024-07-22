@@ -5,6 +5,7 @@ import Link from "next/link";
 
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { signUp } from "./actions";
 
 import {
     Button,
@@ -27,17 +28,18 @@ export default function SignIn({ className, ...props }: SignUpProps) {
     const form = useForm<SignUpSchemaType>({
         resolver: zodResolver(SignUpSchema),
         defaultValues: {
-            firstName: "",
-            lastName: "",
-            email: "",
-            password: ""
+            firstName: "John",
+            lastName: "Doe",
+            email: "john.doe@email.com",
+            password: "password",
+            confirmPassword: "password"
         }
     });
 
-    const onSubmit = (values: SignUpSchemaType) => {
+    async function onSubmit(values: SignUpSchemaType) {
         console.log("Form submitted");
         console.log(values);
-    };
+    }
 
     return (
         <AuthLayout>
@@ -48,7 +50,7 @@ export default function SignIn({ className, ...props }: SignUpProps) {
                 </p>
             </div>
             <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)}>
+                <form onSubmit={form.handleSubmit(signUp)}>
                     <div className="grid gap-4">
                         <div className="grid gap-2">
                             <FormField
@@ -108,23 +110,43 @@ export default function SignIn({ className, ...props }: SignUpProps) {
                             />
                         </div>
                         <div className="grid gap-2">
-                            <Label htmlFor="password">Passwort</Label>
-                            <Input
-                                id="password"
-                                type="password"
-                                placeholder="********"
-                                required
+                            <FormField
+                                control={form.control}
+                                name="password"
+                                render={({ field }) => (
+                                    <FormItem>
+                                        <FormLabel>Passwort</FormLabel>
+                                        <FormControl>
+                                            <Input
+                                                placeholder="********"
+                                                type="password"
+                                                {...field}
+                                            />
+                                        </FormControl>
+                                        <FormMessage />
+                                    </FormItem>
+                                )}
                             />
                         </div>
                         <div className="grid gap-2">
-                            <Label htmlFor="password">
-                                Passwort wiederholen
-                            </Label>
-                            <Input
-                                id="password"
-                                type="password"
-                                placeholder="********"
-                                required
+                            <FormField
+                                control={form.control}
+                                name="confirmPassword"
+                                render={({ field }) => (
+                                    <FormItem>
+                                        <FormLabel>
+                                            Passwort wiederholen
+                                        </FormLabel>
+                                        <FormControl>
+                                            <Input
+                                                placeholder="********"
+                                                type="password"
+                                                {...field}
+                                            />
+                                        </FormControl>
+                                        <FormMessage />
+                                    </FormItem>
+                                )}
                             />
                         </div>
                         <Button type="submit" className="w-full">
