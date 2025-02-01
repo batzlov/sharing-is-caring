@@ -1,0 +1,164 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "firstName": "Max",
+            "lastName": "Mustermann",
+            "email": "max@example.com",
+            "password": "hashedpassword",
+            "role": "USER",
+            "houseNumber": "12A",
+            "street": "Musterstraße",
+            "zipcode": 12345,
+            "city": "Musterstadt",
+            "country": "Deutschland",
+            "createdAt": "2024-02-01T12:00:00Z",
+            "updatedAt": "2024-02-01T12:00:00Z",
+            "borrowedItems": [],
+            "activationHash": null,
+            "resetPasswordHash": null
+        },
+        {
+            "id": 2,
+            "firstName": "Erika",
+            "lastName": "Mustermann",
+            "email": "erika@example.com",
+            "password": "hashedpassword",
+            "role": "ADMIN",
+            "houseNumber": "34B",
+            "street": "Hauptstraße",
+            "zipcode": 54321,
+            "city": "Beispielstadt",
+            "country": "Deutschland",
+            "createdAt": "2024-02-02T12:00:00Z",
+            "updatedAt": "2024-02-02T12:00:00Z",
+            "borrowedItems": [],
+            "activationHash": null,
+            "resetPasswordHash": null
+        }
+    ],
+    "itemCategories": [
+        {
+            "id": 1,
+            "name": "Elektronik",
+            "description": "Elektronische Geräte"
+        },
+        {
+            "id": 2,
+            "name": "Haushaltsgeräte",
+            "description": "Geräte für den Haushalt"
+        },
+        {
+            "id": 3,
+            "name": "Werkzeuge",
+            "description": "Verschiedene Werkzeuge"
+        },
+        {
+            "id": 4,
+            "name": "Fahrräder",
+            "description": "Alle Arten von Fahrrädern"
+        },
+        {
+            "id": 5,
+            "name": "Spielzeug",
+            "description": "Kinderspielzeug"
+        },
+        {
+            "id": 6,
+            "name": "Garten",
+            "description": "Gartengeräte und Zubehör"
+        },
+        {
+            "id": 7,
+            "name": "Möbel",
+            "description": "Wohnmöbel aller Art"
+        },
+        {
+            "id": 8,
+            "name": "Bücher",
+            "description": "Verschiedene Bücher und Romane"
+        },
+        {
+            "id": 9,
+            "name": "Sportartikel",
+            "description": "Ausrüstung für Sportarten"
+        },
+        {
+            "id": 10,
+            "name": "Autozubehör",
+            "description": "Alles rund ums Auto"
+        }
+    ],
+    "items": [
+        {
+            "id": 1,
+            "name": "Laptop",
+            "description": "Hochleistungs-Laptop",
+            "dailyRentalFee": 1000,
+            "categoryId": 1
+        },
+        {
+            "id": 2,
+            "name": "Staubsauger",
+            "description": "Leistungsstarker Staubsauger",
+            "dailyRentalFee": 500,
+            "categoryId": 2
+        },
+        {
+            "id": 3,
+            "name": "Akkubohrer",
+            "description": "Kabelloser Akkubohrer",
+            "dailyRentalFee": 800,
+            "categoryId": 3
+        },
+        {
+            "id": 4,
+            "name": "Mountainbike",
+            "description": "Geländegängiges Fahrrad",
+            "dailyRentalFee": 1500,
+            "categoryId": 4
+        },
+        {
+            "id": 5,
+            "name": "Kinderpuzzle",
+            "description": "Buntes Puzzle für Kinder",
+            "dailyRentalFee": 30,
+            "categoryId": 5
+        },
+        {
+            "id": 6,
+            "name": "Gartenschere",
+            "description": "Schere für Gartenarbeiten",
+            "dailyRentalFee": 50,
+            "categoryId": 6
+        },
+        {
+            "id": 7,
+            "name": "Sofa",
+            "description": "Bequemes Wohnzimmer-Sofa",
+            "dailyRentalFee": 2000,
+            "categoryId": 7
+        },
+        {
+            "id": 8,
+            "name": "Roman 'Die Reise'",
+            "description": "Spannender Roman",
+            "dailyRentalFee": 20,
+            "categoryId": 8
+        },
+        {
+            "id": 9,
+            "name": "Yogamatte",
+            "description": "Rutschfeste Yogamatte",
+            "dailyRentalFee": 100,
+            "categoryId": 9
+        },
+        {
+            "id": 10,
+            "name": "Dachgepäckträger",
+            "description": "Träger für Autodach",
+            "dailyRentalFee": 300,
+            "categoryId": 10
+        }
+    ]
+}
