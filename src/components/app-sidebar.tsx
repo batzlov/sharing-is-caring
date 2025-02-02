@@ -12,6 +12,7 @@ import {
     Send,
     ChartNoAxesGantt,
     ShoppingBag,
+    LibraryBig,
 } from "lucide-react";
 
 import { NavMain } from "@/components/nav-main";
@@ -42,7 +43,7 @@ const data = {
             items: [],
         },
         {
-            title: "Artikel",
+            title: "Gegenstände",
             url: "/dashboard/items",
             icon: ShoppingBag,
             isActive: true,
@@ -65,6 +66,12 @@ const data = {
             title: "Gegenstände",
             url: "/dashboard/admin-items",
             icon: ShoppingBag,
+            items: [],
+        },
+        {
+            title: "Kategorien",
+            url: "/dashboard/admin-categories",
+            icon: LibraryBig,
             items: [],
         },
     ],
