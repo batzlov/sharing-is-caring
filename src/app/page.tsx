@@ -1,11 +1,12 @@
 import { Rocket } from "lucide-react";
+import Link from "next/link";
 
-import { Button } from "@/components/ui/button";
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 import Footer from "@/components/layout/footer";
 import Header from "@/components/layout/header";
-import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 
 export default function Home() {
     return (
@@ -20,8 +21,12 @@ export default function Home() {
 
                 <h1 className="text-4xl font-bold mb-8">Sharing is Caring</h1>
                 <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
-                    <Button>Join now</Button>
-                    <Button>Signup</Button>
+                    <Link href="/auth/sign-up">
+                        <Button>Join now</Button>
+                    </Link>
+                    <Link href="/auth/sign-in">
+                        <Button>Login</Button>
+                    </Link>
                 </div>
             </main>
             <Footer />
