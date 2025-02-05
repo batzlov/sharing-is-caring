@@ -1,14 +1,16 @@
+import type React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+
 import "./globals.css";
+
 import { ThemeProvider } from "@/components/ui/theme-provider";
-import type React from "react"; // Added import for React
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "Minimalistic Landing Page",
-    description: "A minimalistic landing page with sharing is caring theme",
+    title: "Sharing is Caring",
+    description: "Evverything for Everyone",
 };
 
 export default function RootLayout({
@@ -22,8 +24,8 @@ export default function RootLayout({
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="light"
-                    enableSystem={false}
                     disableTransitionOnChange
+                    enableSystem={false}
                 >
                     {children}
                 </ThemeProvider>
